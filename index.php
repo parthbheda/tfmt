@@ -179,7 +179,7 @@
              <div class="card">
             <img class="card-img-top" src="images/items/p1.jpg" alt="Card image cap">
             <div class="card-body">
-              <h5 class="card-title">Brass Valve6</h5>
+              <h5 class="card-title">Brass Valve7</h5>
               <p class="card-text">Price ₹... Login To View Price.</p>
               <a href="#" class="btn btn-primary">Add to Cart</a>
         <a href="#" class="btn btn-success">Buy Now</a>
