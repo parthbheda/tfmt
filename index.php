@@ -76,6 +76,154 @@
     <h2 class="text-center">RECOMMENDED PRODUCTS</h2>
     <hr>
     <div class="container">
+  <div class="row" id="slider-text">
+    <div class="col-md-6" >
+      <h2>NEW COLLECTION</h2>
+    </div>
+  </div>
+</div>
+
+<!-- Item slider-->
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+      <div class="carousel carousel-showmanymoveone slide" id="itemslider">
+        <div class="carousel-inner">
+
+          <div class="item active">
+            <div class="col-xs-12 col-sm-6 col-md-2">
+             <div class="card">
+            <img class="card-img-top" src="images/items/p1.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Brass Valve1</h5>
+              <p class="card-text">Price ₹... Login To View Price.</p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+        <a href="#" class="btn btn-success">Buy Now</a>
+            </div>
+          </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="col-xs-12 col-sm-6 col-md-2">
+             <div class="card">
+            <img class="card-img-top" src="images/items/p1.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Brass Valve2</h5>
+              <p class="card-text">Price ₹... Login To View Price.</p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+        <a href="#" class="btn btn-success">Buy Now</a>
+            </div>
+          </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="col-xs-12 col-sm-6 col-md-2">
+             <div class="card">
+            <img class="card-img-top" src="images/items/p1.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Brass Valve3</h5>
+              <p class="card-text">Price ₹... Login To View Price.</p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+        <a href="#" class="btn btn-success">Buy Now</a>
+            </div>
+          </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="col-xs-12 col-sm-6 col-md-2">
+              <div class="card">
+            <img class="card-img-top" src="images/items/p1.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Brass Valve4</h5>
+              <p class="card-text">Price ₹... Login To View Price.</p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+        <a href="#" class="btn btn-success">Buy Now</a>
+            </div>
+          </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="col-xs-12 col-sm-6 col-md-2">
+            <div class="card">
+            <img class="card-img-top" src="images/items/p1.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Brass Valve5</h5>
+              <p class="card-text">Price ₹... Login To View Price.</p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+        <a href="#" class="btn btn-success">Buy Now</a>
+            </div>
+          </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="col-xs-12 col-sm-6 col-md-2">
+             <div class="card">
+            <img class="card-img-top" src="images/items/p1.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Brass Valve6</h5>
+              <p class="card-text">Price ₹... Login To View Price.</p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+        <a href="#" class="btn btn-success">Buy Now</a>
+            </div>
+          </div>
+            </div>
+          </div>
+                    <div class="item">
+            <div class="col-xs-12 col-sm-6 col-md-2">
+             <div class="card">
+            <img class="card-img-top" src="images/items/p1.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Brass Valve6</h5>
+              <p class="card-text">Price ₹... Login To View Price.</p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+        <a href="#" class="btn btn-success">Buy Now</a>
+            </div>
+          </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="slider-control">
+        <a class="left carousel-control" href="#itemslider" data-slide="prev"><img src="https://s12.postimg.org/uj3ffq90d/arrow_left.png" alt="Left" class="img-responsive"></a>
+        <a class="right carousel-control" href="#itemslider" data-slide="next"><img src="https://s12.postimg.org/djuh0gxst/arrow_right.png" alt="Right" class="img-responsive"></a>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Item slider end-->
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+
+$('#itemslider').carousel({ interval: 3000 });
+
+$('.carousel-showmanymoveone .item').each(function(){
+var itemToClone = $(this);
+
+for (var i=1;i<6;i++) {
+itemToClone = itemToClone.next();
+
+if (!itemToClone.length) {
+itemToClone = $(this).siblings(':first');
+}
+
+itemToClone.children(':first-child').clone()
+.addClass("cloneditem-"+(i))
+.appendTo($(this));
+}
+});
+});
+
+  </script>
+    <div class="container">
       <div class="row text-center">
         <div class="col-md-4 pb-1 pb-md-0">
           <div class="card">
@@ -291,5 +439,6 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap-4.0.0.js"></script>
+     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
